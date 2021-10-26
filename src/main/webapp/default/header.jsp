@@ -81,7 +81,18 @@ nav ul li a:hover {
 			<nav>
 				<ul>
 					<li><a href="${contextPath }/default/main.jsp">HOME</a></li>
+					<c:choose>
+							<c:when test="${userid == null }">
+								<li><a href="${contextPath }/login/login.jsp">로그인</a></li>
+							</c:when>
+							<c:otherwise>
+								<li><a href="${contextPath }/login/logout.jsp">로그아웃</a></li>
+								<li><a href="${contextPath }/memberPage/myPage.jsp">내 페이지</a></li>
+							</c:otherwise>
+						</c:choose>
+					<li><a href="${contextPath }/board/boardView.jsp">게시판</a></li>
 					<li><a href="${contextPath }/member/membership.jsp">MEMBER_SHIP</a></li>
+
 				</ul>
 			</nav>
 		</div>

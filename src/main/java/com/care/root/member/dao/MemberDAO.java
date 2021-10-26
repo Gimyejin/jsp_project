@@ -72,11 +72,10 @@ public class MemberDAO {
 	
 	public MemberDTO myID(String id) {
 		System.out.println("아이디로 해당 내용 갖고오기");
-		String sql="select * from jsp_member where id = ?";
+		String sql="select * from jsp_member where id = '"+id+"'";
 		MemberDTO dto =null;
 		try {
 			ps=con.prepareStatement(sql);
-			ps.setString(1, id);
 			rs=ps.executeQuery();
 			if(rs.next()) {
 				dto=new MemberDTO();

@@ -7,7 +7,19 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <style type="text/css">
-	.mine{text-decoration: none;}
+		<link href="${contextPath }/css/member.css" rel="stylesheet" >
+
+		table {
+			border-collapse: collapse;
+			width: 100%; margin-top: 20px;
+		}
+		th, td {
+			padding: 10px;
+			border-bottom: 1px solid #CD5C5C;
+		}
+		a {text-decoration: none; color:orange; } 
+		a:hover { color: black;}
+	
 </style>
 </head>
 <body>
@@ -28,13 +40,12 @@
 				<tr>
 					<td>${member.id }</td>
 					<td>${member.pwd }</td>
-					<c:set var="myid" value="${member.id }"/>
-					<td><a href="myPage.jsp?id=${myid }" class="mine" >${member.name }</a></td>
+					<td><a href="${contextPath }/member/myPage.jsp?id=${member.id }" class="mine" >${member.name }</a></td>
 					<td>${member.addr }</td>
 				</tr>
 			</c:forEach>
 			<tr>
-				<td colspan="4"><button type="button" onclick="location.href='${contextPath}/member/member_register.jsp'">등록</button></td>
+				<td colspan="4"><button type="button" class="btn" onclick="location.href='${contextPath}/member/member_register.jsp'">등록</button></td>
 			</tr>
 		</table>
 	</div>
