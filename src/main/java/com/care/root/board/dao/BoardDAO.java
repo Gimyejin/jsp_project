@@ -48,7 +48,7 @@ public class BoardDAO {
 		try {
 			ps=con.prepareStatement(sql);
 			rs=ps.executeQuery();
-			if(rs.next()) {
+			while(rs.next()) {
 				BoardDTO dto = new BoardDTO();
 				dto.setId(rs.getString("id"));
 				dto.setTitle(rs.getString("title"));

@@ -91,6 +91,7 @@ nav ul li a:hover {
 							</c:otherwise>
 						</c:choose>
 					<li><a href="${contextPath }/board/boardView.jsp">게시판</a></li>
+					<li><a href="${contextPath }/boardWith/list.jsp">Board(with)</a></li>
 					<li><a href="${contextPath }/member/membership.jsp">MEMBER_SHIP</a></li>
 
 				</ul>
